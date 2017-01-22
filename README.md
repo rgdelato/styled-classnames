@@ -34,3 +34,6 @@ const FilterLink = (props) => {
 
 export default FilterLink;
 ```
+
+## Warning!
+I made this just for myself and it's not intended for production use!
