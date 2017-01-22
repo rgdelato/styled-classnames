@@ -1,6 +1,8 @@
 # styled-classnames
 Use [`styled-components`](https://github.com/styled-components/styled-components) without the components!
 
+...it's a short hack that still uses `styled-components` under the hood, so all the credit for this goes to [Glen Maddern](https://twitter.com/glenmaddern), [Max Stoiber](https://twitter.com/mxstbr), and the `styled-components` community.
+
 ## Usage
 ```javascript
 import React from "react";
@@ -33,6 +35,12 @@ const FilterLink = (props) => {
 };
 
 export default FilterLink;
+```
+
+## Details
+Helper methods from `styled-components` are included:
+```javascript
+import styled, { css, keyframes } from "styled-classnames";
 ```
 
 ## Warning!
