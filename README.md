@@ -38,9 +38,9 @@ export default FilterLink;
 ```
 
 ## Details
-Helper methods from `styled-components` are included:
+Helper methods from `styled-components` are also exposed:
 ```javascript
-import styled, { css, keyframes } from "styled-classnames";
+import styled, { css, keyframes, injectGlobal, ThemeProvider, withTheme } from "styled-classnames";
 ```
 
 ## Warning!

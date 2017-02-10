@@ -1,15 +1,18 @@
 import componentStyle from "styled-components/lib/models/ComponentStyle";
 import generateAlphabeticName from "styled-components/lib/utils/generateAlphabeticName";
 import css from "styled-components/lib/constructors/css";
+import injectGlobal from "styled-components/lib/constructors/injectGlobal";
 import keyframes from "styled-components/lib/constructors/keyframes";
+import ThemeProvider from "styled-components/lib/models/ThemeProvider";
+import withTheme from "styled-components/lib/hoc/withTheme";
 
-const ComponentStyleClass = componentStyle(generateAlphabeticName);
+const ComponentStyle = componentStyle(generateAlphabeticName);
 
-const generateCSSClass = (strings, ...interpolations) => {
-  const instance = new ComponentStyleClass(css(strings, ...interpolations));
+const generateCSSClassName = (strings, ...interpolations) => {
+  const instance = new ComponentStyle(css(strings, ...interpolations));
 
-  let className = function(props) {
-    return instance.generateAndInjectStyles(props || {});
+  let className = function(props = {}) {
+    return instance.generateAndInjectStyles(props);
   };
 
   className.toString = className;
@@ -17,6 +20,5 @@ const generateCSSClass = (strings, ...interpolations) => {
   return className;
 };
 
-export default generateCSSClass;
-
-export { css, keyframes };
+export default generateCSSClassName;
+export { css, keyframes, injectGlobal, ThemeProvider, withTheme };
