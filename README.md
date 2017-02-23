@@ -40,8 +40,7 @@ export default FilterLink;
 ## Details
 Helper methods from `styled-components` are also exposed:
 ```javascript
-import styled, { css, keyframes, injectGlobal, ThemeProvider, withTheme } from "styled-classnames";
+import styled, { css, keyframes, injectGlobal } from "styled-classnames";
 ```
 
-## Warning!
-I made this just for myself and it's not intended for production use!
+Note that `ThemeProvider` and `withTheme` are React-specific and are not included in this library. If you need them, you can still import them from `styled-components`, or if you know how context works in React, you could write them yourself.
