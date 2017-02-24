@@ -4,7 +4,7 @@
   "description": "styled-components without the components",
   "main": "build/index.js",
   "scripts": {
-    "build": "babel --out-dir build src"
+    "build": "rm -rf build && babel src --out-dir build && webpack --output-filename styled-classnames.umd.js && webpack -p --output-filename styled-classnames.umd.min.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,9 @@
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
-    "babel-preset-latest": "^6.22.0"
+    "babel-preset-latest": "^6.22.0",
+    "react": "^15.4.2",
+    "webpack": "^2.2.1"
   },
   "files": [
     "build"
