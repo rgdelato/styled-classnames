@@ -4,10 +4,12 @@ import generateAlphabeticName
 import css from "styled-components/lib/constructors/css";
 import injectGlobal from "styled-components/lib/constructors/injectGlobal";
 import keyframes from "styled-components/lib/constructors/keyframes";
+import parseArguments from "./parseArguments";
 
 const ComponentStyle = componentStyle(generateAlphabeticName);
 
-const generateCSSClassName = (strings, ...interpolations) => {
+const generateCSSClassName = (...args) => {
+  const { strings, interpolations } = parseArguments(args);
   const instance = new ComponentStyle(css(strings, ...interpolations));
 
   let className = function(props = {}) {
