@@ -3,7 +3,7 @@ Use [`styled-components`](https://github.com/styled-components/styled-components
 
 ...it's a short hack that still uses `styled-components` under the hood, so all the credit for this goes to [Glen Maddern](https://twitter.com/glenmaddern), [Max Stoiber](https://twitter.com/mxstbr), and the `styled-components` community.
 
-## Usage
+## Javascript Usage
 ```javascript
 import React from "react";
 import Link from "react-router/Link";
@@ -35,6 +35,22 @@ const FilterLink = (props) => {
 };
 
 export default FilterLink;
+```
+
+## ClojureScript Usage (Experimental)
+```clojure
+(def font-family (atom "Baskerville"))
+
+(def header-class (styled "
+  font-size: 72px;
+  font-family: " @font-family ";
+  font-style: italic;
+  color: " #(:color %) ";
+"))
+
+(defn hello-world []
+  [:h1 {:class (header-class {:color "rebeccapurple"})}
+    "Hello world!"])
 ```
 
 ## Details
