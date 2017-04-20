@@ -3,7 +3,14 @@ Use [`styled-components`](https://github.com/styled-components/styled-components
 
 ...it's a short hack that still uses `styled-components` under the hood, so all the credit for this goes to [Glen Maddern](https://twitter.com/glenmaddern), [Max Stoiber](https://twitter.com/mxstbr), and the `styled-components` community.
 
-## Javascript Usage
+Be aware that including `styled-components` adds a significant amount to your final JS bundle size. (The upcoming v2 of `styled-components` should use a much smaller parser.)
+
+## Javascript
+
+```
+npm install --save-dev styled-classnames
+```
+
 ```javascript
 import React from "react";
 import Link from "react-router/Link";
@@ -37,7 +44,10 @@ const FilterLink = (props) => {
 export default FilterLink;
 ```
 
-## ClojureScript Usage (Experimental)
+## ClojureScript
+
+[![Clojars Project](https://img.shields.io/clojars/v/cljsjs/styled-classnames.svg)](https://clojars.org/cljsjs/styled-classnames)
+
 ```clojure
 (def font-family (atom "Baskerville"))
 
