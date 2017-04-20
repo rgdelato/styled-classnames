@@ -41,7 +41,7 @@ export default FilterLink;
 ```clojure
 (def font-family (atom "Baskerville"))
 
-(def header-class (styled "
+(def header-class (js/styled "
   font-size: 72px;
   font-family: " @font-family ";
   font-style: italic;
