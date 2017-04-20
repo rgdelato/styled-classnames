@@ -1,25 +1,7 @@
-import componentStyle from "styled-components/lib/models/ComponentStyle";
-import generateAlphabeticName
-  from "styled-components/lib/utils/generateAlphabeticName";
-import css from "styled-components/lib/constructors/css";
-import injectGlobal from "styled-components/lib/constructors/injectGlobal";
-import keyframes from "styled-components/lib/constructors/keyframes";
-import parseArguments from "./parseArguments";
+import styled from "./styled";
+import css from "./css";
+import keyframes from "./keyframes";
+import injectGlobal from "./injectGlobal";
 
-const ComponentStyle = componentStyle(generateAlphabeticName);
-
-const generateCSSClassName = (...args) => {
-  const { strings, interpolations } = parseArguments(args);
-  const instance = new ComponentStyle(css(strings, ...interpolations));
-
-  let className = function(props = {}) {
-    return instance.generateAndInjectStyles(props);
-  };
-
-  className.toString = className;
-
-  return className;
-};
-
-export default generateCSSClassName;
+export default styled;
 export { css, keyframes, injectGlobal };
