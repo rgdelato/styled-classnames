@@ -49,18 +49,23 @@ export default FilterLink;
 [![Clojars Project](https://img.shields.io/clojars/v/cljsjs/styled-classnames.svg)](https://clojars.org/cljsjs/styled-classnames)
 
 ```clojure
+(ns demo.core
+    (:require [reagent.core :as reagent]
+              cljsjs.styled-classnames))
+
 (def font-family (atom "Baskerville"))
 
-(def header-class (js/styled "
+(def home-class (js/styled "
   font-size: 72px;
   font-family: " @font-family ";
   font-style: italic;
   color: " #(:color %) ";
 "))
 
-(defn hello-world []
-  [:h1 {:class (header-class {:color "rebeccapurple"})}
-    "Hello world!"])
+(defn home-page []
+  [:div
+    [:h2 {:class (home-class {:color "rebeccapurple"})}
+      "Welcome to Reagent"]])
 ```
 
 ## Details
