@@ -7,6 +7,8 @@ Be aware that including `styled-components` adds a significant amount to your fi
 
 ## Javascript
 
+[![npm version](https://img.shields.io/npm/v/styled-classnames.svg?style=flat)](https://www.npmjs.com/package/styled-classnames) 
+
 ```
 npm install --save-dev styled-classnames
 ```
