@@ -1,6 +1,6 @@
 {
   "name": "styled-classnames",
-  "version": "2.1.3",
+  "version": "2.2.0",
   "description": "styled-components without the components",
   "main": "build/index.js",
   "scripts": {
