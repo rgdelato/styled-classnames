@@ -1,4 +1,5 @@
-import css from "styled-components/lib/constructors/css";
+import { css } from "styled-components";
+
 import parseArguments from "./parseArguments";
 
 const parsedCSS = (...args) => {

@@ -1,4 +1,5 @@
-import keyframes from "styled-components/lib/constructors/keyframes";
+import { keyframes } from "styled-components";
+
 import parseArguments from "./parseArguments";
 
 const parsedKeyframes = (...args) => {

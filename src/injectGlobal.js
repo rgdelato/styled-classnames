@@ -1,4 +1,5 @@
-import injectGlobal from "styled-components/lib/constructors/injectGlobal";
+import { injectGlobal } from "styled-components";
+
 import parseArguments from "./parseArguments";
 
 const parsedInjectGlobal = (...args) => {

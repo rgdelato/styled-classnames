@@ -3,7 +3,7 @@ Use [`styled-components`](https://github.com/styled-components/styled-components
 
 ...it's a short hack that still uses `styled-components` under the hood, so all the credit for this goes to [Glen Maddern](https://twitter.com/glenmaddern), [Max Stoiber](https://twitter.com/mxstbr), and the `styled-components` community.
 
-Be aware that including `styled-components` adds a significant amount to your final JS bundle size. (The upcoming v2 of `styled-components` should use a much smaller parser.)
+Be aware that including `styled-classnames` adds a noticeable amount to your final JS bundle size.
 
 ## Javascript
 
