@@ -1,3 +1,6 @@
+# Warning: This library is no longer being maintained!
+I would strongly recommend using another CSS-in-JS library, such as [Emotion](https://emotion.sh/)
+
 # styled-classnames
 Use [`styled-components`](https://github.com/styled-components/styled-components) without the components!
 
